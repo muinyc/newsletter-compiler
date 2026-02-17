@@ -1,0 +1,37 @@
+{
+  "name": "newsletter-compiler",
+  "version": "1.0.0",
+  "description": "Convert Markdown newsletters into email-ready HTML with CSS inlining, image processing, Listmonk campaigns, and WordPress integration",
+  "main": "compile-email.js",
+  "bin": {
+    "newsletter-compiler": "./compile-email.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "newsletter",
+    "email",
+    "markdown",
+    "html",
+    "listmonk",
+    "wordpress",
+    "css-inline"
+  ],
+  "author": "Stefan Kubicki",
+  "license": "MIT",
+  "dependencies": {
+    "form-data": "^4.0.3",
+    "html-minifier-terser": "^7.2.0",
+    "image-size": "^2.0.2",
+    "inline-css": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^14.1.0",
+    "node-fetch": "^3.3.2",
+    "slugify": "^1.6.6",
+    "wpapi": "^1.2.2"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}

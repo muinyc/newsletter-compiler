@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{{newsletter_title}} #{{issue}}</title>
+
+    <style type="text/css">
+        /* Reset */
+        * { margin: 0; padding: 0; }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: none;
+            width: 100% !important;
+            background-color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        }
+
+        /* Layout */
+        .container { max-width: 600px; margin: 0 auto; }
+        .content   { padding: 20px 16px; }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: #000;
+        }
+        h4, h5, h6 { margin-top: 32px; font-size: 20px; }
+
+        p, ul, ol {
+            margin-bottom: 1.4em;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+        ul li, ol li { margin-left: 30px; }
+
+        a { color: #000; }
+
+        blockquote {
+            border-left: 3px solid #ddd;
+            padding-left: 15px;
+            font-style: italic;
+        }
+
+        hr {
+            width: 20%;
+            margin: 32px auto;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            padding: 10px;
+            background: #f6f6f6;
+            border-radius: 4px;
+            font-family: Menlo, Inconsolata, monospace;
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 1.4em;
+        }
+
+        code {
+            font-family: Menlo, Inconsolata, monospace;
+            font-size: 14px;
+            background: #f6f6f6;
+            padding: 0.15em 0.3em;
+            border-radius: 2px;
+        }
+        pre code { background: none; padding: 0; }
+
+        /* Images */
+        img { max-width: 100%; height: auto; }
+
+        img.fullbleed {
+            width: 100% !important;
+            height: auto !important;
+            border-radius: 3px;
+            margin-top: 0.5em;
+        }
+        img.fullbleed.no-caption { margin-bottom: 1.8em; }
+
+        p.caption {
+            font-size: 13px;
+            color: #888;
+            margin-top: 0;
+            margin-bottom: 1.8em;
+        }
+
+        /* Components */
+        p.callout {
+            padding: 14px;
+            background: #f5f3ed;
+            border-radius: 3px;
+            margin-bottom: 1.4em;
+        }
+        .highlight { background-color: #fff3c4; }
+
+        /* Header */
+        .header { padding: 16px 0 28px; }
+        .header h2 { font-size: 18px; font-weight: bold; margin-bottom: 2px; }
+        .header h3 { font-size: 14px; font-weight: normal; margin: 0; color: #666; }
+
+        /* Footer */
+        .footer { font-size: 13px; color: #999; text-align: center; padding-top: 24px; }
+        .footer a { color: #666; }
+
+        /* Responsive */
+        @media only screen and (max-width: 600px) {
+            .content { padding: 12px 10px; }
+            p, ul, ol { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <table width="100%"><tr>
+        <td></td>
+        <td class="container">
+            <div class="content">
+                <!-- Hidden preheader for email clients -->
+                <span style="display:none; max-height:0; overflow:hidden;">{{description}}</span>
+
+                <div class="header">
+                    <h2>{{newsletter_title}}</h2>
+                    <h3>#{{issue}}</h3>
+                </div>
+
+                {{content}}
+
+                <div class="footer">
+                    <p><a href="{{ UnsubscribeURL }}">Unsubscribe</a></p>
+                    {{ TrackView }}
+                </div>
+            </div>
+        </td>
+        <td></td>
+    </tr></table>
+</body>
+</html>
