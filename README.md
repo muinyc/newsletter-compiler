@@ -124,4 +124,4 @@ Options:
 ***
 © 2026 [Stefan Kubicki](https://kubicki.org) • a [CYNIUM](https://cynium.com) release • shipped from the [Atoll](https://kubicki.org/atoll)
 ***
-Canonical URL: https://forge.cynium.com/stefan/newsletter-compiler
+Canonical URL: https://forge.cynium.com/cynium/newsletter-compiler
